@@ -84,15 +84,54 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://aresona.github.io/index.html">
+<meta name="description" content="添加一台主机到zabbix
+
+安装zabbix-agent
+修改配置文件/etc/zabbix/zabbix-agnetd.conf(修改Server为zabbix服务端)
+启动zabbix-agent
+web配置（添加主机－item-模板）
+
+######## zabbix-agnet配置文件分为下面几部分
+
+general parameters
+Passive Check Related
+Ac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zabbix2">
+<meta property="og:url" content="http://aresona.github.io/2016/06/22/zabbix2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="添加一台主机到zabbix
+
+安装zabbix-agent
+修改配置文件/etc/zabbix/zabbix-agnetd.conf(修改Server为zabbix服务端)
+启动zabbix-agent
+web配置（添加主机－item-模板）
+
+######## zabbix-agnet配置文件分为下面几部分
+
+general parameters
+Passive Check Related
+Ac">
+<meta property="og:image" content="https://github.com/Aresona/edu-docs/blob/master/image/%E7%9B%91%E6%8E%A7%E7%9B%B8%E5%85%B3/%E7%9B%91%E6%8E%A7%E6%9E%B6%E6%9E%84%E5%AE%9E%E9%AA%8C%E5%9B%BE.png">
+<meta property="og:image" content="https://github.com/Aresona/edu-docs/blob/master/image/%E7%9B%91%E6%8E%A7%E7%9B%B8%E5%85%B3/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9B%B8%E5%85%B3%E5%9B%BE1.png">
+<meta property="og:image" content="https://github.com/Aresona/edu-docs/blob/master/image/%E7%9B%91%E6%8E%A7%E7%9B%B8%E5%85%B3/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9B%B8%E5%85%B3%E5%9B%BE2.png">
+<meta property="og:image" content="https://github.com/Aresona/edu-docs/blob/master/image/%E7%9B%91%E6%8E%A7%E7%9B%B8%E5%85%B3/zabbix%E7%9B%91%E6%8E%A7JMX%E5%8E%9F%E7%90%86%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
+<meta property="og:updated_time" content="2016-06-22T14:06:29.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="zabbix2">
+<meta name="twitter:description" content="添加一台主机到zabbix
+
+安装zabbix-agent
+修改配置文件/etc/zabbix/zabbix-agnetd.conf(修改Server为zabbix服务端)
+启动zabbix-agent
+web配置（添加主机－item-模板）
+
+######## zabbix-agnet配置文件分为下面几部分
+
+general parameters
+Passive Check Related
+Ac">
+<meta name="twitter:image" content="https://github.com/Aresona/edu-docs/blob/master/image/%E7%9B%91%E6%8E%A7%E7%9B%B8%E5%85%B3/%E7%9B%91%E6%8E%A7%E6%9E%B6%E6%9E%84%E5%AE%9E%E9%AA%8C%E5%9B%BE.png">
 
 
 
@@ -113,9 +152,9 @@
 
 
 
-  <link rel="canonical" href="http://aresona.github.io/"/>
+  <link rel="canonical" href="http://aresona.github.io/2016/06/22/zabbix2/"/>
 
-  <title> Hexo </title>
+  <title> zabbix2 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,9 +175,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -215,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -237,10 +274,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/06/22/zabbix2/" itemprop="url">
-                  zabbix2
-                </a>
+                zabbix2
               
             
           </h1>
@@ -280,9 +314,7 @@
       
 
       
-        
-          
-            <p><strong>添加一台主机到zabbix</strong></p>
+        <p><strong>添加一台主机到zabbix</strong></p>
 <ol>
 <li>安装zabbix-agent</li>
 <li>修改配置文件/etc/zabbix/zabbix-agnetd.conf(修改Server为zabbix服务端)</li>
@@ -876,16 +908,19 @@ Include=/etc/zabbix/zabbix_agentd.d/
 <p>折腾：</p>
 <p><a href="http://www.52devops.com/chuck/630.html" target="_blank" rel="external">马亮</a><br><a href="http://www.jixuege.com" target="_blank" rel="external">谢迪</a><br><a href="http://bjstack.combjstack.com" target="_blank" rel="external">良辰</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -893,224 +928,32 @@ Include=/etc/zabbix/zabbix_agentd.d/
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/06/20/主机规范/" rel="next" title="主机规范">
+                <i class="fa fa-chevron-left"></i> 主机规范
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/06/20/主机规范/" itemprop="url">
-                  主机规范
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-20T11:31:20+08:00" content="2016-06-20">
-              2016-06-20
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="操作系统安装及初始化规范"><a href="#操作系统安装及初始化规范" class="headerlink" title="操作系统安装及初始化规范"></a>操作系统安装及初始化规范</h1><blockquote>
-<p>v1.0</p>
-</blockquote>
-<h2 id="操作系统安装流程"><a href="#操作系统安装流程" class="headerlink" title="操作系统安装流程"></a>操作系统安装流程</h2><ol>
-<li>服务器采购</li>
-<li>服务器验收并设置raid</li>
-<li>服务商提供验收单，运维验收负责人签字</li>
-<li>服务器上架
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/20/主机规范/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/19/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-19T21:24:35+08:00" content="2016-06-19">
-              2016-06-19
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1118,6 +961,10 @@ Include=/etc/zabbix/zabbix_agentd.d/
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -1137,8 +984,17 @@ Include=/etc/zabbix/zabbix_agentd.d/
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://github.com/Aresona/edu-docs/blob/master/image/%E5%A4%B4%E5%83%8F.jpg"
@@ -1181,6 +1037,17 @@ Include=/etc/zabbix/zabbix_agentd.d/
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#web配置（通过克隆的方式）"><span class="nav-number">1.</span> <span class="nav-text">web配置（通过克隆的方式）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#报警"><span class="nav-number"></span> <span class="nav-text">报警</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#事件通知的几个方面"><span class="nav-number"></span> <span class="nav-text">事件通知的几个方面</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#完整的告警流程"><span class="nav-number"></span> <span class="nav-text">完整的告警流程</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产案例实战"><span class="nav-number"></span> <span class="nav-text">生产案例实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目规划"><span class="nav-number"></span> <span class="nav-text">项目规划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实施监控"><span class="nav-number"></span> <span class="nav-text">实施监控</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#SNMP监控"><span class="nav-number">1.</span> <span class="nav-text">SNMP监控</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IPMI监控"><span class="nav-number">2.</span> <span class="nav-text">IPMI监控</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#使用Agent监控服务器"><span class="nav-number">3.</span> <span class="nav-text">使用Agent监控服务器</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#使用JMX监控JAVA"><span class="nav-number">4.</span> <span class="nav-text">使用JMX监控JAVA</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#手动检测监控状态"><span class="nav-number"></span> <span class="nav-text">手动检测监控状态</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产角度"><span class="nav-number"></span> <span class="nav-text">生产角度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#触发器"><span class="nav-number"></span> <span class="nav-text">触发器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义脚本报警"><span class="nav-number"></span> <span class="nav-text">自定义脚本报警</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web监控"><span class="nav-number"></span> <span class="nav-text">web监控</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#把node2改成主动模式"><span class="nav-number"></span> <span class="nav-text">把node2改成主动模式</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zabbix-Proxy"><span class="nav-number"></span> <span class="nav-text">zabbix Proxy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动化监控"><span class="nav-number"></span> <span class="nav-text">自动化监控</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动发现（注册）"><span class="nav-number"></span> <span class="nav-text">自动发现（注册）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#自动-发现"><span class="nav-number"></span> <span class="nav-text">自动 发现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API（服务化）"><span class="nav-number"></span> <span class="nav-text">API（服务化）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#使用API来自动加"><span class="nav-number">1.</span> <span class="nav-text">使用API来自动加</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#画图时间"><span class="nav-number"></span> <span class="nav-text">画图时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#作业"><span class="nav-number"></span> <span class="nav-text">作业</span></a></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1284,6 +1151,10 @@ Include=/etc/zabbix/zabbix_agentd.d/
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
