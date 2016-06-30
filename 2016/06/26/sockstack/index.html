@@ -84,18 +84,51 @@
 
 
 
-<meta name="description" content="运维自动化之SaltStack简介SaltStack是用python语言写的，提供了API、支持多种操作系统（所有类Unix系统都默认安装Python），windows只能安装Minion端程序。">
+<meta name="description" content="运维自动化之SaltStack简介SaltStack是用python语言写的，提供了API、支持多种操作系统（所有类Unix系统都默认安装Python），windows只能安装Minion端程序。
+官网
+中国SaltStack用户组
+SaltStack 三大功能：
+远程执行
+配置管理（状态、很难回滚）
+云管理
+
+
+运维三板斧：监控、执行、配置管理
+
+类似软件：Puppet(ruby)、Ansibl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sockstack">
 <meta property="og:url" content="http://aresona.github.io/2016/06/26/sockstack/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="运维自动化之SaltStack简介SaltStack是用python语言写的，提供了API、支持多种操作系统（所有类Unix系统都默认安装Python），windows只能安装Minion端程序。">
+<meta property="og:description" content="运维自动化之SaltStack简介SaltStack是用python语言写的，提供了API、支持多种操作系统（所有类Unix系统都默认安装Python），windows只能安装Minion端程序。
+官网
+中国SaltStack用户组
+SaltStack 三大功能：
+远程执行
+配置管理（状态、很难回滚）
+云管理
+
+
+运维三板斧：监控、执行、配置管理
+
+类似软件：Puppet(ruby)、Ansibl">
 <meta property="og:image" content="https://www.unixhot.com/uploads/article/20151027/055f24981e25860e08942d7f0aa9d0ab.png">
 <meta property="og:image" content="https://github.com/Aresona/edu-docs/blob/master/image/touxiang.jpg">
-<meta property="og:updated_time" content="2016-06-26T09:46:14.154Z">
+<meta property="og:updated_time" content="2016-06-30T15:11:31.036Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sockstack">
-<meta name="twitter:description" content="运维自动化之SaltStack简介SaltStack是用python语言写的，提供了API、支持多种操作系统（所有类Unix系统都默认安装Python），windows只能安装Minion端程序。">
+<meta name="twitter:description" content="运维自动化之SaltStack简介SaltStack是用python语言写的，提供了API、支持多种操作系统（所有类Unix系统都默认安装Python），windows只能安装Minion端程序。
+官网
+中国SaltStack用户组
+SaltStack 三大功能：
+远程执行
+配置管理（状态、很难回滚）
+云管理
+
+
+运维三板斧：监控、执行、配置管理
+
+类似软件：Puppet(ruby)、Ansibl">
 <meta name="twitter:image" content="https://www.unixhot.com/uploads/article/20151027/055f24981e25860e08942d7f0aa9d0ab.png">
 
 
@@ -280,7 +313,6 @@
 
       
         <h1 id="运维自动化之SaltStack"><a href="#运维自动化之SaltStack" class="headerlink" title="运维自动化之SaltStack"></a>运维自动化之SaltStack</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>SaltStack是用python语言写的，提供了API、支持多种操作系统（所有类Unix系统都默认安装Python），windows只能安装Minion端程序。</p>
-<a id="more"></a>
 <p><a href="https://saltstack.com/" target="_blank" rel="external">官网</a></p>
 <p><a href="http://www.saltstack.cn" target="_blank" rel="external">中国SaltStack用户组</a></p>
 <h3 id="SaltStack-三大功能："><a href="#SaltStack-三大功能：" class="headerlink" title="SaltStack 三大功能："></a>SaltStack 三大功能：</h3><ul>
@@ -310,23 +342,23 @@ yum install https://repo.saltstack.com/yum/redhat/salt-repo-latest-1.el7.noarch.
 
 </li>
 </ol>
-<h6 id="Master端"><a href="#Master端" class="headerlink" title="Master端"></a>Master端</h6><pre>
+<h4 id="Master端"><a href="#Master端" class="headerlink" title="Master端"></a>Master端</h4><pre>
 yum install salt-master salt-minion -y
 </pre>
 
-<h6 id="Minion端"><a href="#Minion端" class="headerlink" title="Minion端"></a>Minion端</h6><pre>
+<h4 id="Minion端"><a href="#Minion端" class="headerlink" title="Minion端"></a>Minion端</h4><pre>
 yum install salt-minion -y
 </pre>
 
-<h6 id="windows下Minion安装"><a href="#windows下Minion安装" class="headerlink" title="windows下Minion安装"></a>windows下Minion安装</h6><pre>
+<h4 id="windows下Minion安装"><a href="#windows下Minion安装" class="headerlink" title="windows下Minion安装"></a>windows下Minion安装</h4><pre>
 Salt-Minion-2016.3.1-AMD64-Setup.exe /S /master=yoursaltmaster /minion-name=yourminionname
 </pre>
 
-<h3 id="配置及启动"><a href="#配置及启动" class="headerlink" title="配置及启动"></a>配置及启动</h3><h6 id="启动salt-master"><a href="#启动salt-master" class="headerlink" title="启动salt-master"></a>启动salt-master</h6><pre>
+<h3 id="配置及启动"><a href="#配置及启动" class="headerlink" title="配置及启动"></a>配置及启动</h3><h4 id="启动salt-master"><a href="#启动salt-master" class="headerlink" title="启动salt-master"></a>启动salt-master</h4><pre>
 systemctl start salt-master
 </pre>
 
-<h6 id="配置并启动minion"><a href="#配置并启动minion" class="headerlink" title="配置并启动minion"></a>配置并启动minion</h6><pre>
+<h4 id="配置并启动minion"><a href="#配置并启动minion" class="headerlink" title="配置并启动minion"></a>配置并启动minion</h4><pre>
 sed -i 's/# master: salt/master: 192.168.56.11/' /etc/salt/minion
 systemctl start salt-minion
 </pre>
@@ -368,7 +400,7 @@ eed44ea7c9d65c7aeddd56dedcebd3df  pki/master/minions_pre/linux-node2.example.com
 eed44ea7c9d65c7aeddd56dedcebd3df  pki/minion/minion.pub
 </pre>
 
-<h6 id="列出所有keys"><a href="#列出所有keys" class="headerlink" title="列出所有keys"></a>列出所有keys</h6><pre>
+<h4 id="列出所有keys"><a href="#列出所有keys" class="headerlink" title="列出所有keys"></a>列出所有keys</h4><pre>
 [root@linux-node1 salt]# salt-key 
 Accepted Keys:
 Denied Keys:
@@ -377,7 +409,7 @@ linux-node1.example.com
 linux-node2.example.com
 Rejected Keys:
 </pre>
-###### Master端同意所有申请管理的Minion端keys
+#### Master端同意所有申请管理的Minion端keys
 <pre>
 salt-key -a linux-node1.example.com
 salt-key -a linux-node*
@@ -447,10 +479,10 @@ test.ping:
 </code></pre><p><a href="http://arlen.blog.51cto.com/7175583/1424216" target="_blank" rel="external">其他用法</a></p>
 <h3 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h3><p>Salt通过 <strong>状态模块</strong> 来识别状态，所以需要写一个关于状态的文件，它是一个YAML格式的文件，并且文件名后缀以 <code>.sls</code> 结尾。</p>
 <p><a href="https://www.unixhot.com/docs/saltstack/index.html" target="_blank" rel="external">SaltStack官方镜像文档</a></p>
-<h5 id="理解YAML"><a href="#理解YAML" class="headerlink" title="理解YAML"></a>理解YAML</h5><blockquote>
+<h4 id="理解YAML"><a href="#理解YAML" class="headerlink" title="理解YAML"></a>理解YAML</h4><blockquote>
 <p>YAML是”YAML Ain’t a Markup Language”（YAML不是一种置标语言）的递归缩写。它是类似于标准通用标记语言的子集XML的数据描述语言，语法比XML简单很多。因为它简单。</p>
 </blockquote>
-<h6 id="三个规则"><a href="#三个规则" class="headerlink" title="三个规则"></a>三个规则</h6><ol>
+<h5 id="三个规则"><a href="#三个规则" class="headerlink" title="三个规则"></a>三个规则</h5><ol>
 <li>缩进（代表层级关系，2个空格，并且不能使用TAB键，整个saltstack里面都不能用TAB键）</li>
 <li>冒号（1. 跟缩进一起代理层级目录（以冒号结尾不用空格）；2. 分隔键值对[key: value],支持嵌套，冒号后面必须有一个空格）</li>
 <li>短横线（它是一个列表，<code>-</code> 后面必须有空格）</li>
@@ -501,11 +533,11 @@ salt '*' state.sls web.apache
 <p><code>state</code> 是一个模块（/usr/lib/python2.7/site-packages/salt/modules/state.py），sls是它的一个方法，它的作用就是 <code>Execute the states in one or more SLS files</code> ，这些状态文件是放在环境下的，并且这些状态文件里面会调用state的状态模块（/usr/lib/python2.7/site-packages/salt/states）。</p>
 <p>/var/cache/salt/minion是一个很重要的目录，一般master把文件发给minion并放在这个目录下,minion从上往下加载</p>
 </blockquote>
-<h6 id="遇到的错误"><a href="#遇到的错误" class="headerlink" title="遇到的错误"></a>遇到的错误</h6><pre>
+<h4 id="遇到的错误"><a href="#遇到的错误" class="headerlink" title="遇到的错误"></a>遇到的错误</h4><pre>
 Salt request timed out. The master is not responding. If this error persists after verifying the master is up, worker_threads may need to be increased.
 </pre>
 
-<h6 id="执行小技巧"><a href="#执行小技巧" class="headerlink" title="执行小技巧"></a>执行小技巧</h6><blockquote>
+<h4 id="执行小技巧"><a href="#执行小技巧" class="headerlink" title="执行小技巧"></a>执行小技巧</h4><blockquote>
 <p>已经有的是绿色，新完成的是浅绿色</p>
 </blockquote>
 <h4 id="通过-top-sls来有选择地执行状态文件"><a href="#通过-top-sls来有选择地执行状态文件" class="headerlink" title="通过 top.sls来有选择地执行状态文件"></a>通过 <code>top.sls</code>来有选择地执行状态文件</h4><p>top文件也是sls结尾，也是YAML格式。它放在base环境下，也就是这里的/srv/salt下</p>
@@ -600,22 +632,24 @@ Total states run:     3
 <h2 id="SaltStack与ZeroMQ"><a href="#SaltStack与ZeroMQ" class="headerlink" title="SaltStack与ZeroMQ"></a>SaltStack与ZeroMQ</h2><p> 我们进行自动化运维大多数情况下，是我们的服务器数量已经远远超过人工SSH维护的范围，SaltStack可以支数以千计，甚至更多的服务器。这些性能的提供主要来自于ZeroMQ，因为SaltStack底层是基于ZeroMQ进行高效的网络通信。ZMQ用于node与node间的通信，node可以是主机也可以是进程。</p>
 <h3 id="ZeroMQ简介"><a href="#ZeroMQ简介" class="headerlink" title="ZeroMQ简介"></a>ZeroMQ简介</h3><p>  ZeroMQ（我们通常还会用ØMQ , 0MQ, zmq等来表示）是一个简单好用的传输层，像框架一样的一个套接字库，他使得Socket编程更加简单、简洁和性能更高。它还是一个消息处理队列库，可在多个线程、内核和主机盒之间弹性伸缩。<br>发布与订阅 ZeroMQ支持Publish/Subscribe，即发布与订阅模式，我们经常简称Pub/Sub。</p>
 <p><img src="https://www.unixhot.com/uploads/article/20151027/055f24981e25860e08942d7f0aa9d0ab.png" alt=""></p>
-<h5 id="发布与订阅模式（Publish-Subscribe）简称Pub-Sub"><a href="#发布与订阅模式（Publish-Subscribe）简称Pub-Sub" class="headerlink" title="发布与订阅模式（Publish/Subscribe）简称Pub/Sub"></a>发布与订阅模式（Publish/Subscribe）简称Pub/Sub</h5><p>所有的minion都会连到4505端口，而且是TCP的长连接</p>
+<h4 id="发布与订阅模式（Publish-Subscribe）简称Pub-Sub"><a href="#发布与订阅模式（Publish-Subscribe）简称Pub-Sub" class="headerlink" title="发布与订阅模式（Publish/Subscribe）简称Pub/Sub"></a>发布与订阅模式（Publish/Subscribe）简称Pub/Sub</h4><p>所有的minion都会连到4505端口，而且是TCP的长连接</p>
 <p>salt ‘*’ cmd.run ‘w’</p>
-<h5 id="请求与响应模式"><a href="#请求与响应模式" class="headerlink" title="请求与响应模式"></a>请求与响应模式</h5><p>默认监听4506端口，返回结果的时候通过4506端口，</p>
-<p>####### 显示进程标题</p>
-<pre>
+<h4 id="请求与响应模式"><a href="#请求与响应模式" class="headerlink" title="请求与响应模式"></a>请求与响应模式</h4><p>默认监听4506端口，返回结果的时候通过4506端口，</p>
+<h4 id="显示进程标题"><a href="#显示进程标题" class="headerlink" title="显示进程标题"></a>显示进程标题</h4><pre>
 yum install -y python-setproctitle
 systemctl restart salt-master
 ps -ef|grep salt-mast
 </pre>
 
 <p><a href="https://www.unixhot.com/article/15" target="_blank" rel="external">相关文章介绍</a></p>
-<h3 id="Saltstack的数据系统"><a href="#Saltstack的数据系统" class="headerlink" title="Saltstack的数据系统"></a>Saltstack的数据系统</h3><p><a href="http://www.cnblogs.com/alexyang8/p/3445333.html" target="_blank" rel="external">SaltStack整体架构</a><br>两种数据系统</p>
-<p><em>　Grains（谷粒）
-</em>　Pillar（柱子）</p>
-<p>Grains是静态数据，它是在Minion启动的时候收集的Minion本地的相关信息，如：操作系统版本，内核版本，ＣＰＵ，内存，硬盘，设备型号，机器序列号。它可以做资产管理，只要不重启它，它就会只收集一次，当重启的时候才会再次收集，启动完后就不会变了,它是一个key/value的东西。</p>
-<p>作用：</p>
+<h2 id="SaltStack的数据系统"><a href="#SaltStack的数据系统" class="headerlink" title="SaltStack的数据系统"></a>SaltStack的数据系统</h2><p><a href="http://www.cnblogs.com/alexyang8/p/3445333.html" target="_blank" rel="external">SaltStack整体架构</a></p>
+<p>saltstack有两种数据系统：</p>
+<ul>
+<li>Grains（谷粒）</li>
+<li>Pillar（柱子）</li>
+</ul>
+<h3 id="Grains"><a href="#Grains" class="headerlink" title="Grains"></a>Grains</h3><p>Grains是静态数据，它是在Minion启动的时候收集的Minion本地的相关信息，如：操作系统版本，内核版本，ＣＰＵ，内存，硬盘，设备型号，机器序列号。它可以做资产管理，只要不重启它，它就会只收集一次，当重启的时候才会再次收集，启动完后就不会变了,它是一个key/value的东西。</p>
+<p><strong>作用</strong>：</p>
 <ul>
 <li>资产管理、信息查询</li>
 <li>用于目标选择（不同于ID的另外目标定义方法，操作系统等）</li>
@@ -635,12 +669,15 @@ salt -G 'os:CentOS' test.ping
 salt -G 'os:CentOS' cmd.run 'echo hehe'
 </pre>
 
-<p>可以给某一个minion自定义一个grains，然后再来找它，方法：写配置文件，有两种办法来存放 它</p>
+<p>可以给某一个minion自定义一个grains，然后再来找它，方法：<br>写配置文件，有两种办法来存放它</p>
 <pre>
 vim /etc/salt/minion
 grains:
   roles: apache 
-systemctl restart salt-minion
+</pre>
+
+<pre><code>systemctl restart salt-minion
+</code></pre><pre> 
 [root@linux-node1 salt]# salt '*' grains.item roles
 linux-node2.example.com:
     ----------
@@ -657,17 +694,18 @@ linux-node2.example.com:
         apache:
 </pre>
 
-<p>重启所有apache</p>
-<pre><code>salt -G &apos;roles:apache&apos; cmd.run &apos;systemctl restart httpd&apos;
+<h4 id="重启所有apache"><a href="#重启所有apache" class="headerlink" title="重启所有apache"></a>重启所有apache</h4><pre><code>salt -G &apos;roles:apache&apos; cmd.run &apos;systemctl restart httpd&apos;
 </code></pre><blockquote>
 <p>生产不建议放在minion配置文件里面，写在 <code>/etc/salt/grains</code> 里面，minion会自动来这找；并且上面这条命令中的roles:后面是没有空格的</p>
 </blockquote>
-<pre><code>cloud: openstack
+<pre><code>vim /etc/salt/grains
+cloud: openstack
+
 salt &apos;*&apos; grains.item cloud
 </code></pre><blockquote>
 <p>加完之后必须重启，因为它是静态的。但不重启也有一个刷新的命令 <code>salt &#39;*&#39; saltutil.sync_grains</code> 无论上面两种方法写在哪都可以成功。</p>
 </blockquote>
-<h4 id="top-file使用案例"><a href="#top-file使用案例" class="headerlink" title="top file使用案例"></a>top file使用案例</h4><p>grains还可以用到top.sls文件里面</p>
+<h3 id="top-file中使用grains案例"><a href="#top-file中使用grains案例" class="headerlink" title="top file中使用grains案例"></a>top file中使用grains案例</h3><p>grains还可以用到top.sls文件里面</p>
 <pre>
 base:
   'linux-node1.example.com':
@@ -678,45 +716,54 @@ base:
 </pre>
 
 
-<h4 id="配置管理的案例"><a href="#配置管理的案例" class="headerlink" title="配置管理的案例"></a>配置管理的案例</h4><p>vim /srv/salt/web/apache.sls</p>
-<blockquote>
+<h3 id="配置管理的案例"><a href="#配置管理的案例" class="headerlink" title="配置管理的案例"></a>配置管理的案例</h3><pre><code>vim /srv/salt/web/apache.sls
+</code></pre><blockquote>
 <p>可以自己用python脚本来写一个grains，实现动态，这里说的动态是通过逻辑后产生的</p>
 </blockquote>
 <h4 id="用Python开发一个grains"><a href="#用Python开发一个grains" class="headerlink" title="用Python开发一个grains"></a>用Python开发一个grains</h4><p>写一个python脚本返回一个字典就可以了。</p>
-<ol>
-<li>放哪儿<ol>
-<li>cd /srv/salt/</li>
-<li>mkdir _grains</li>
-<li>cd _grains</li>
-</ol>
-</li>
-<li>写脚本<ol>
-<li>vim my_grains.py<br><pre><br>#!/usr/bin/env python<br>#-<em>- coding: utf-8 -</em>-</pre></li>
-</ol>
-</li>
-</ol>
-<p>def my_grains():</p>
-<pre><code># 初始化一个grains字典
-grains = {}
-# 设置字典中的key/value
-grains[&apos;iaas&apos;] = &apos;openstack&apos;
-grains[&apos;edu&apos;] = &apos;example&apos;
-# 返回这个字典
-return grains
-</code></pre><p></p>
-<ol>
+<ul>
+<li>放哪儿</li>
+</ul>
+<pre>
+cd /srv/salt/
+mkdir _grains
+cd _grains
+</pre>
+* 写脚本
+
+<pre>
+vim my_grains.py
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+
+def my_grains():
+    # 初始化一个grains字典
+    grains = {}
+    # 设置字典中的key/value
+    grains['iaas'] = 'openstack'
+    grains['edu'] = 'example'
+    # 返回这个字典
+    return grains
+</pre>
+
+<ul>
 <li>把grains推送给minion<pre>
 salt '*' saltutil.sync_grains
-它会放在/var/cache/salt/minion/extmods/grains/my_grains.py
-</pre></li>
+</pre>
+
+</li>
+</ul>
+<blockquote>
+<p>它会放在/var/cache/salt/minion/extmods/grains/my_grains.py</p>
+</blockquote>
+<ul>
 <li>查看</li>
-</ol>
+</ul>
 <pre>
 salt '*' grains.item iaas
 </pre>
 
-<p>Grains优先级：</p>
-<ol>
+<h4 id="Grains优先级："><a href="#Grains优先级：" class="headerlink" title="Grains优先级："></a>Grains优先级：</h4><ol>
 <li>系统自带</li>
 <li>grains文件写的</li>
 <li>minion配置文件写的</li>
@@ -1115,7 +1162,7 @@ linux-node1.example.com:
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#运维自动化之SaltStack"><span class="nav-number">1.</span> <span class="nav-text">运维自动化之SaltStack</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SaltStack-三大功能："><span class="nav-number">1.1.1.</span> <span class="nav-text">SaltStack 三大功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SaltStack-四种运行方式"><span class="nav-number">1.1.2.</span> <span class="nav-text">SaltStack 四种运行方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#典型案例"><span class="nav-number">1.1.3.</span> <span class="nav-text">典型案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QUICK-START"><span class="nav-number">1.2.</span> <span class="nav-text">QUICK START</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Master端"><span class="nav-number">1.2.1.0.0.1.</span> <span class="nav-text">Master端</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Minion端"><span class="nav-number">1.2.1.0.0.2.</span> <span class="nav-text">Minion端</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#windows下Minion安装"><span class="nav-number">1.2.1.0.0.3.</span> <span class="nav-text">windows下Minion安装</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置及启动"><span class="nav-number">1.2.2.</span> <span class="nav-text">配置及启动</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#启动salt-master"><span class="nav-number">1.2.2.0.0.1.</span> <span class="nav-text">启动salt-master</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#配置并启动minion"><span class="nav-number">1.2.2.0.0.2.</span> <span class="nav-text">配置并启动minion</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#认证"><span class="nav-number">1.2.3.</span> <span class="nav-text">认证</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#列出所有keys"><span class="nav-number">1.2.3.0.0.1.</span> <span class="nav-text">列出所有keys</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID的设置"><span class="nav-number">1.2.4.</span> <span class="nav-text">ID的设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程执行"><span class="nav-number">1.2.5.</span> <span class="nav-text">远程执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#salt命令用法"><span class="nav-number">1.2.6.</span> <span class="nav-text">salt命令用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置管理"><span class="nav-number">1.2.7.</span> <span class="nav-text">配置管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#理解YAML"><span class="nav-number">1.2.7.0.1.</span> <span class="nav-text">理解YAML</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#三个规则"><span class="nav-number">1.2.7.0.1.1.</span> <span class="nav-text">三个规则</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写一个状态文件"><span class="nav-number">1.2.7.1.</span> <span class="nav-text">写一个状态文件</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#遇到的错误"><span class="nav-number">1.2.7.1.0.1.</span> <span class="nav-text">遇到的错误</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#执行小技巧"><span class="nav-number">1.2.7.1.0.2.</span> <span class="nav-text">执行小技巧</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过-top-sls来有选择地执行状态文件"><span class="nav-number">1.2.7.2.</span> <span class="nav-text">通过 top.sls来有选择地执行状态文件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#执行高级状态"><span class="nav-number">1.2.7.2.1.</span> <span class="nav-text">执行高级状态</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SaltStack与ZeroMQ"><span class="nav-number">1.3.</span> <span class="nav-text">SaltStack与ZeroMQ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ZeroMQ简介"><span class="nav-number">1.3.1.</span> <span class="nav-text">ZeroMQ简介</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#发布与订阅模式（Publish-Subscribe）简称Pub-Sub"><span class="nav-number">1.3.1.0.1.</span> <span class="nav-text">发布与订阅模式（Publish/Subscribe）简称Pub/Sub</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#请求与响应模式"><span class="nav-number">1.3.1.0.2.</span> <span class="nav-text">请求与响应模式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Saltstack的数据系统"><span class="nav-number">1.3.2.</span> <span class="nav-text">Saltstack的数据系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信息查询"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">信息查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目标选择"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">目标选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#top-file使用案例"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">top file使用案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置管理的案例"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">配置管理的案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用Python开发一个grains"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">用Python开发一个grains</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pillar"><span class="nav-number">1.3.3.</span> <span class="nav-text">pillar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用场景"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">使用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grains-VS-Pillar"><span class="nav-number">1.3.4.</span> <span class="nav-text">Grains VS Pillar</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程执行-1"><span class="nav-number">1.4.</span> <span class="nav-text">远程执行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#目标Targeting"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">目标Targeting</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#有关的"><span class="nav-number">1.4.0.1.1.</span> <span class="nav-text">有关的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#无关的"><span class="nav-number">1.4.0.1.2.</span> <span class="nav-text">无关的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NODE-GROUPS"><span class="nav-number">1.4.0.1.3.</span> <span class="nav-text">NODE GROUPS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#混合匹配"><span class="nav-number">1.4.0.1.4.</span> <span class="nav-text">混合匹配</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#批处理"><span class="nav-number">1.4.0.1.5.</span> <span class="nav-text">批处理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">模块</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#NETWORK"><span class="nav-number">1.4.0.2.0.1.</span> <span class="nav-text">NETWORK</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#SERVICE"><span class="nav-number">1.4.0.2.0.2.</span> <span class="nav-text">SERVICE</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#CP"><span class="nav-number">1.4.0.2.0.3.</span> <span class="nav-text">CP</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#STATE"><span class="nav-number">1.4.0.2.0.4.</span> <span class="nav-text">STATE</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回程序"><span class="nav-number">1.4.1.</span> <span class="nav-text">返回程序</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SALT-RETURNERS-MYSQL"><span class="nav-number">1.4.1.0.1.</span> <span class="nav-text">SALT.RETURNERS.MYSQL</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写一个执行模块"><span class="nav-number">1.4.2.</span> <span class="nav-text">编写一个执行模块</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#运维自动化之SaltStack"><span class="nav-number">1.</span> <span class="nav-text">运维自动化之SaltStack</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SaltStack-三大功能："><span class="nav-number">1.1.1.</span> <span class="nav-text">SaltStack 三大功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SaltStack-四种运行方式"><span class="nav-number">1.1.2.</span> <span class="nav-text">SaltStack 四种运行方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#典型案例"><span class="nav-number">1.1.3.</span> <span class="nav-text">典型案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QUICK-START"><span class="nav-number">1.2.</span> <span class="nav-text">QUICK START</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Master端"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">Master端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Minion端"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">Minion端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#windows下Minion安装"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">windows下Minion安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置及启动"><span class="nav-number">1.2.2.</span> <span class="nav-text">配置及启动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#启动salt-master"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">启动salt-master</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置并启动minion"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">配置并启动minion</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#认证"><span class="nav-number">1.2.3.</span> <span class="nav-text">认证</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#列出所有keys"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">列出所有keys</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID的设置"><span class="nav-number">1.2.4.</span> <span class="nav-text">ID的设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程执行"><span class="nav-number">1.2.5.</span> <span class="nav-text">远程执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#salt命令用法"><span class="nav-number">1.2.6.</span> <span class="nav-text">salt命令用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置管理"><span class="nav-number">1.2.7.</span> <span class="nav-text">配置管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#理解YAML"><span class="nav-number">1.2.7.1.</span> <span class="nav-text">理解YAML</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#三个规则"><span class="nav-number">1.2.7.1.1.</span> <span class="nav-text">三个规则</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写一个状态文件"><span class="nav-number">1.2.7.2.</span> <span class="nav-text">写一个状态文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的错误"><span class="nav-number">1.2.7.3.</span> <span class="nav-text">遇到的错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行小技巧"><span class="nav-number">1.2.7.4.</span> <span class="nav-text">执行小技巧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过-top-sls来有选择地执行状态文件"><span class="nav-number">1.2.7.5.</span> <span class="nav-text">通过 top.sls来有选择地执行状态文件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#执行高级状态"><span class="nav-number">1.2.7.5.1.</span> <span class="nav-text">执行高级状态</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SaltStack与ZeroMQ"><span class="nav-number">1.3.</span> <span class="nav-text">SaltStack与ZeroMQ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ZeroMQ简介"><span class="nav-number">1.3.1.</span> <span class="nav-text">ZeroMQ简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#发布与订阅模式（Publish-Subscribe）简称Pub-Sub"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">发布与订阅模式（Publish/Subscribe）简称Pub/Sub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求与响应模式"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">请求与响应模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示进程标题"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">显示进程标题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SaltStack的数据系统"><span class="nav-number">1.4.</span> <span class="nav-text">SaltStack的数据系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Grains"><span class="nav-number">1.4.1.</span> <span class="nav-text">Grains</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信息查询"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">信息查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目标选择"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">目标选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重启所有apache"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">重启所有apache</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#top-file中使用grains案例"><span class="nav-number">1.4.2.</span> <span class="nav-text">top file中使用grains案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置管理的案例"><span class="nav-number">1.4.3.</span> <span class="nav-text">配置管理的案例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用Python开发一个grains"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">用Python开发一个grains</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Grains优先级："><span class="nav-number">1.4.3.2.</span> <span class="nav-text">Grains优先级：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pillar"><span class="nav-number">1.4.4.</span> <span class="nav-text">pillar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用场景"><span class="nav-number">1.4.4.1.</span> <span class="nav-text">使用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grains-VS-Pillar"><span class="nav-number">1.4.5.</span> <span class="nav-text">Grains VS Pillar</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程执行-1"><span class="nav-number">1.5.</span> <span class="nav-text">远程执行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#目标Targeting"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">目标Targeting</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#有关的"><span class="nav-number">1.5.0.1.1.</span> <span class="nav-text">有关的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#无关的"><span class="nav-number">1.5.0.1.2.</span> <span class="nav-text">无关的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NODE-GROUPS"><span class="nav-number">1.5.0.1.3.</span> <span class="nav-text">NODE GROUPS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#混合匹配"><span class="nav-number">1.5.0.1.4.</span> <span class="nav-text">混合匹配</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#批处理"><span class="nav-number">1.5.0.1.5.</span> <span class="nav-text">批处理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">模块</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#NETWORK"><span class="nav-number">1.5.0.2.0.1.</span> <span class="nav-text">NETWORK</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#SERVICE"><span class="nav-number">1.5.0.2.0.2.</span> <span class="nav-text">SERVICE</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#CP"><span class="nav-number">1.5.0.2.0.3.</span> <span class="nav-text">CP</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#STATE"><span class="nav-number">1.5.0.2.0.4.</span> <span class="nav-text">STATE</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回程序"><span class="nav-number">1.5.1.</span> <span class="nav-text">返回程序</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SALT-RETURNERS-MYSQL"><span class="nav-number">1.5.1.0.1.</span> <span class="nav-text">SALT.RETURNERS.MYSQL</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写一个执行模块"><span class="nav-number">1.5.2.</span> <span class="nav-text">编写一个执行模块</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
