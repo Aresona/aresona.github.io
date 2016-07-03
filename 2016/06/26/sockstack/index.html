@@ -113,7 +113,7 @@ SaltStack 三大功能：
 
 类似软件：Puppet(ruby)、Ansibl">
 <meta property="og:image" content="https://www.unixhot.com/uploads/article/20151027/055f24981e25860e08942d7f0aa9d0ab.png">
-<meta property="og:updated_time" content="2016-07-03T10:37:09.508Z">
+<meta property="og:updated_time" content="2016-07-03T10:38:41.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sockstack">
 <meta name="twitter:description" content="运维自动化之SaltStack简介SaltStack是用python语言写的，提供了API、支持多种操作系统（所有类Unix系统都默认安装Python），windows只能安装Minion端程序。
@@ -1119,9 +1119,18 @@ MariaDB [salt]> select * from salt_returns;
 </code></pre><p>编写模块：</p>
 <ol>
 <li>放哪（cd /srv/salt/_modules）</li>
-<li>命名（文件名就是模块名，如my_disk.py）<br><pre><br>[root@linux-node1 _modules]# cat my_disk.py<br>#!/usr/bin/env python</pre></li>
+<li>命名（文件名就是模块名，如my_disk.py）</li>
 </ol>
-<p>def list():<br>  cmd = ‘df -h’<br>  ret = <strong>salt</strong><a href="cmd">‘cmd.run’</a><br>  return ret<br></p>
+<pre>
+[root@linux-node1 _modules]# cat my_disk.py 
+#!/usr/bin/env python
+
+def list():
+  cmd = 'df -h'
+  ret = __salt__['cmd.run'](cmd)
+  return ret
+</pre>
+
 <p>刷新</p>
 <pre><code>salt &apos;*&apos; saltutil.sync_modules
 </code></pre><pre>
